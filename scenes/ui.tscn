@@ -14,22 +14,44 @@ grow_horizontal = 0
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 
-[node name="TimeDisplay" type="HBoxContainer" parent="MarginContainer" unique_id=1732544316 node_paths=PackedStringArray("time_display", "ms_display")]
+[node name="AllTimeDisplay" type="VBoxContainer" parent="MarginContainer" unique_id=1664730141 node_paths=PackedStringArray("time_display", "ms_display", "par_display", "par_ms_display")]
+layout_mode = 2
+script = ExtResource("1_nt7q6")
+time_display = NodePath("TimeDisplay/Time")
+ms_display = NodePath("TimeDisplay/Ms")
+par_display = NodePath("ParDisplay/Time")
+par_ms_display = NodePath("ParDisplay/Ms")
+
+[node name="TimeDisplay" type="HBoxContainer" parent="MarginContainer/AllTimeDisplay" unique_id=1732544316]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 alignment = 2
-script = ExtResource("1_nt7q6")
-time_display = NodePath("Time")
-ms_display = NodePath("Ms")
 
-[node name="Time" type="Label" parent="MarginContainer/TimeDisplay" unique_id=956102850 groups=["Timer"]]
+[node name="Time" type="Label" parent="MarginContainer/AllTimeDisplay/TimeDisplay" unique_id=956102850 groups=["Timer"]]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "10:00"
 
-[node name="Ms" type="Label" parent="MarginContainer/TimeDisplay" unique_id=151092442 groups=["Timer"]]
+[node name="Ms" type="Label" parent="MarginContainer/AllTimeDisplay/TimeDisplay" unique_id=151092442 groups=["Timer"]]
 modulate = Color(0.7146291, 0.71462905, 0.71462905, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
+text = "00"
+
+[node name="ParDisplay" type="HBoxContainer" parent="MarginContainer/AllTimeDisplay" unique_id=1313849354]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+alignment = 2
+
+[node name="Time" type="Label" parent="MarginContainer/AllTimeDisplay/ParDisplay" unique_id=922646775 groups=["Timer"]]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "10:00"
+
+[node name="Ms" type="Label" parent="MarginContainer/AllTimeDisplay/ParDisplay" unique_id=1382223560 groups=["Timer"]]
+modulate = Color(0.7146291, 0.71462905, 0.71462905, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
 text = "00"
