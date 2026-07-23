@@ -3,9 +3,12 @@ extends CharacterBody2D
 
 @export var speed = 300.0
 @export var jump_velocity = -400.0
+@export var ground_pound_vel = 1000.0
 @export var dash_factor = 5.0
 @export var dash_friction = 0.1
 @export var friction = 0.2
+
+
 
 var has_dashed = false
 
@@ -32,6 +35,13 @@ func _physics_process(delta: float) -> void:
 	if is_dashing and not has_dashed:
 		velocity.x = direction * speed * dash_factor
 		has_dashed = true
+
+	# Check if the player is ground-pounding
+
+	var is_ground_pounding = Input.is_action_just_pressed("ground_pound")
+	if is_ground_pounding and not is_on_floor():
+		velocity.y = ground_pound_vel
+
 
 	# movement/deceleration
 
