@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b64ip"]
 size = Vector2(98, 76)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_imxm8"]
+size = Vector2(20, 500)
+
 [node name="LevelTest" type="StaticBody2D" unique_id=1229753384 node_paths=PackedStringArray("start", "end")]
 script = ExtResource("1_h0hot")
 start = NodePath("Start")
@@ -26,3 +29,10 @@ position = Vector2(919, 466)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="End" unique_id=526357847]
 position = Vector2(10, 13)
 shape = SubResource("RectangleShape2D_b64ip")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1504030322]
+position = Vector2(387, 488)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=163861974]
+shape = SubResource("RectangleShape2D_imxm8")
