@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d346najg8gerp"]
+
+[ext_resource type="Texture2D" uid="uid://5g31g86bub6f" path="res://assets/lightbrick.png" id="1_bkp1e"]
+
+[node name="Background" type="Sprite2D" unique_id=1899381530]
+modulate = Color(0.22959325, 0.22959325, 0.22959322, 1)
+z_index = -100
+scale = Vector2(1728.0001, 1064)
+texture = ExtResource("1_bkp1e")

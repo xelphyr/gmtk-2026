@@ -1,5 +1,4 @@
-extends StaticBody2D
-class_name LevelScene
+extends Node2D
 
 const player_scene = preload("res://scenes/player.tscn")
 

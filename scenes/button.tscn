@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://o6ajgiah3ns2"]
+
+[ext_resource type="Texture2D" uid="uid://5g31g86bub6f" path="res://assets/lightbrick.png" id="1_mi6dp"]
+[ext_resource type="Script" uid="uid://qjhxpl8wucpx" path="res://scripts/button.gd" id="1_rhj8v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rhj8v"]
+size = Vector2(40, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3q610"]
+size = Vector2(44, 6)
+
+[node name="Button" type="Area2D" unique_id=2064387183]
+script = ExtResource("1_rhj8v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=18385780]
+position = Vector2(0, -27.5)
+shape = SubResource("RectangleShape2D_rhj8v")
+
+[node name="Base2" type="StaticBody2D" parent="." unique_id=1454718596]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base2" unique_id=1847809325]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_3q610")
+
+[node name="Base" type="Sprite2D" parent="." unique_id=719666283]
+position = Vector2(0, 3)
+scale = Vector2(44, 6)
+texture = ExtResource("1_mi6dp")
+
+[node name="Button" type="Sprite2D" parent="." unique_id=1592609005]
+modulate = Color(0.88140017, 0, 0.41901, 1)
+position = Vector2(-1.1368684e-13, -2.0000002)
+scale = Vector2(40, 5)
+texture = ExtResource("1_mi6dp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
