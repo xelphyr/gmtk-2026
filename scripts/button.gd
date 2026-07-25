@@ -22,9 +22,11 @@ func _process(delta: float) -> void:
 
 func turn_off():
 	state = false
+	$Button.position.y += 3
 
 func turn_on():
 	state=true
+	$Button.position.y -= 3
 
 func trigger_toggle():
 	EventBus.button_toggle.emit(id, !state)

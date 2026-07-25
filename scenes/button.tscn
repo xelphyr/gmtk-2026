@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://qjhxpl8wucpx" path="res://scripts/button.gd" id="1_rhj8v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhj8v"]
-size = Vector2(60, 19.5)
+size = Vector2(64, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3q610"]
 size = Vector2(64, 6)
@@ -13,7 +13,7 @@ size = Vector2(64, 6)
 script = ExtResource("1_rhj8v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=18385780]
-position = Vector2(32, -15.75)
+position = Vector2(32, -16)
 shape = SubResource("RectangleShape2D_rhj8v")
 
 [node name="Base2" type="StaticBody2D" parent="." unique_id=1454718596]
@@ -23,15 +23,15 @@ position = Vector2(22, -6)
 position = Vector2(10, 3)
 shape = SubResource("RectangleShape2D_3q610")
 
+[node name="Button" type="Sprite2D" parent="." unique_id=1592609005]
+modulate = Color(0.88140017, 0, 0.41901, 1)
+position = Vector2(31.999996, -8.5)
+scale = Vector2(59.999996, 5.000001)
+texture = ExtResource("1_mi6dp")
+
 [node name="Base" type="Sprite2D" parent="." unique_id=719666283]
 position = Vector2(32, -3)
 scale = Vector2(64, 6)
-texture = ExtResource("1_mi6dp")
-
-[node name="Button" type="Sprite2D" parent="." unique_id=1592609005]
-modulate = Color(0.88140017, 0, 0.41901, 1)
-position = Vector2(31.999996, -8.500001)
-scale = Vector2(59.999996, 5)
 texture = ExtResource("1_mi6dp")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
