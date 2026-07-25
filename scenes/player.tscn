@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://2eeie7b41qln" path="res://assets/playuer.png" id="2_g2els"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
+radius = 6.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1017544552 groups=["Player"]]
 z_index = 5
@@ -14,8 +15,8 @@ shape = SubResource("CircleShape2D_qhqgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=115802511]
 modulate = Color(0.9910992, 0.19797629, 0, 1)
-position = Vector2(-9.536743e-07, -9.536743e-07)
-scale = Vector2(0.31249997, 0.31249997)
+position = Vector2(5.9604645e-07, 5.9604645e-07)
+scale = Vector2(0.1875, 0.1875)
 texture = ExtResource("2_g2els")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=498606371]
@@ -25,6 +26,6 @@ texture = ExtResource("2_g2els")
 lifetime = 0.2
 speed_scale = 4.0
 gravity = Vector2(0, 0)
-scale_amount_min = 0.31
-scale_amount_max = 0.31
+scale_amount_min = 0.19
+scale_amount_max = 0.19
 color = Color(0.908024, 0, 0.23084667, 1)

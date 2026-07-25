@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bvdkl4qieid7l" path="res://scenes/ui.tscn" id="2_lnu2h"]
 [ext_resource type="Script" uid="uid://d1wpwlfyfallu" path="res://scripts/level_manager.gd" id="3_lnu2h"]
+[ext_resource type="Resource" uid="uid://bmdmsu77t3ova" path="res://scenes/levels/0/level.tres" id="4_gee14"]
 [ext_resource type="Script" uid="uid://c8fgpc43a0o8b" path="res://scripts/level.gd" id="4_iywne"]
 [ext_resource type="Script" uid="uid://dng6hkdv3fdx8" path="res://scripts/camera.gd" id="5_iywne"]
-[ext_resource type="Resource" uid="uid://cwrdq7v5uq4kx" path="res://scenes/levels/playground/level.tres" id="5_p57ef"]
 
 [node name="Game" type="Node2D" unique_id=1531241673]
 
@@ -17,4 +17,4 @@ script = ExtResource("5_iywne")
 
 [node name="LevelManager" type="Node2D" parent="." unique_id=993272433 groups=["LevelManager"]]
 script = ExtResource("3_lnu2h")
-levels = Array[ExtResource("4_iywne")]([ExtResource("5_p57ef")])
+levels = Array[ExtResource("4_iywne")]([ExtResource("4_gee14")])
