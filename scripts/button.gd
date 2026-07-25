@@ -8,7 +8,7 @@ extends Area2D
 const ON_RST = 0.5
 
 ## Restitution when the button is pressed when `state=false`, and the button transitions into `state=true`
-const OFF_RST = 1.5
+const OFF_RST = 2.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

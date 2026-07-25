@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://qjhxpl8wucpx" path="res://scripts/button.gd" id="1_rhj8v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rhj8v"]
-size = Vector2(40, 55)
+size = Vector2(40, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3q610"]
 size = Vector2(44, 6)
@@ -13,7 +13,7 @@ size = Vector2(44, 6)
 script = ExtResource("1_rhj8v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=18385780]
-position = Vector2(0, -27.5)
+position = Vector2(0, -9.5)
 shape = SubResource("RectangleShape2D_rhj8v")
 
 [node name="Base2" type="StaticBody2D" parent="." unique_id=1454718596]

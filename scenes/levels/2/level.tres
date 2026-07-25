@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Level" format=3 uid="uid://bqi3v5lkoh6wg"]
+
+[ext_resource type="PackedScene" uid="uid://dsymkcbjmgm2a" path="res://scenes/levels/2/level.tscn" id="1_dcn3o"]
+[ext_resource type="Script" uid="uid://c8fgpc43a0o8b" path="res://scripts/level.gd" id="2_d30gd"]
+
+[resource]
+script = ExtResource("2_d30gd")
+level_scene = ExtResource("1_dcn3o")
+metadata/_custom_type_script = "uid://c8fgpc43a0o8b"

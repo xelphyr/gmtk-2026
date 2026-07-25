@@ -1,14 +1,11 @@
 extends CharacterBody2D
 
-
 const speed = 300.0
-const jump_velocity = -400.0
-const ground_pound_vel = 3000.0
-const dash_factor = 5.0
+const jump_velocity = -300.0
+const ground_pound_vel = 1000.0
+const dash_factor = 3.5
 const wall_jump_factor = 1.0
 const dash_friction = 0.1
-const wall_friction = 0.15
-const wall_slide_speed = 100
 const friction = 0.2
 
 #NOTE: Make it so that friction decreases with high speed
@@ -17,7 +14,7 @@ var has_dashed = false
 var can_wall_jump = false
 
 var is_slamming = false
-var slam_height = 0
+var slam_start_at = 0
 
 var trigger_bounce = -1
 
@@ -35,7 +32,8 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		has_dashed = false
 		can_wall_jump = false
-		is_slamming = false
+
+		set_deferred("is_slamming", false)
 
 
 	# Handle jump.
@@ -63,12 +61,13 @@ func _physics_process(delta: float) -> void:
 	if is_ground_pounding and not is_on_floor() and not is_slamming:
 		velocity.y = ground_pound_vel
 		is_slamming = true
-		slam_height = global_position.y
+		slam_start_at = global_position.y
 
 	if trigger_bounce >0:
+		print(trigger_bounce)
 		is_slamming = false
-		velocity.y = -sqrt(2*(slam_height* trigger_bounce)/get_gravity().y)*get_gravity().y
-		slam_height = 0
+		var slam_height = abs(slam_start_at - global_position.y)
+		velocity.y = -sqrt(2*(slam_height*trigger_bounce)*get_gravity().y)
 		trigger_bounce = -1
 
 	# movement/deceleration
@@ -79,7 +78,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed*friction)
 
-	print(velocity)
 	move_and_slide()
 
 func bounce(rst: float):
