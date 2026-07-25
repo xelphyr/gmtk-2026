@@ -25,7 +25,7 @@ shape = SubResource("RectangleShape2D_3q610")
 
 [node name="Button" type="Sprite2D" parent="." unique_id=1592609005]
 modulate = Color(0.88140017, 0, 0.41901, 1)
-position = Vector2(31.999996, -8.5)
+position = Vector2(32, -8)
 scale = Vector2(59.999996, 5.000001)
 texture = ExtResource("1_mi6dp")
 
