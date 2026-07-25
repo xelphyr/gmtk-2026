@@ -1,3 +1,60 @@
 [gd_scene format=3 uid="uid://ckomxm1lifmva"]
 
+[ext_resource type="Texture2D" uid="uid://5g31g86bub6f" path="res://assets/lightbrick.png" id="1_jaeev"]
+
+[sub_resource type="Animation" id="Animation_jaeev"]
+resource_name = "Close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door:polygon")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedVector2Array(0, 0, 0, -28, 0, -28, 3.8, -24, 3.8, 0), PackedVector2Array(0, 0, 0, -28, 16, -28, 20, -24, 20, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3d26k"]
+resource_name = "Open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door:polygon")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [PackedVector2Array(0, 0, 0, -28, 16, -28, 20, -24, 20, 0), PackedVector2Array(0, 0, 0, -28, 0, -28, 3.8, -24, 3.8, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u80x2"]
+_data = {
+&"Close": SubResource("Animation_jaeev"),
+&"Open": SubResource("Animation_3d26k")
+}
+
 [node name="Start" type="Node2D" unique_id=506239360]
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=1459631920]
+position = Vector2(0.75, -14)
+scale = Vector2(16.5, 28)
+texture = ExtResource("1_jaeev")
+
+[node name="Door" type="Polygon2D" parent="." unique_id=134160691]
+position = Vector2(-11, 0)
+color = Color(0.58431375, 0, 0.5137255, 1)
+polygon = PackedVector2Array(0, 0, 0, -28, 0, -28, 3.8, -24, 3.8, 0)
+
+[node name="Frame" type="Polygon2D" parent="." unique_id=1568832195]
+modulate = Color(0.16350216, 0.16350219, 0.16350216, 1)
+position = Vector2(-11, 0)
+polygon = PackedVector2Array(0, 0, 0, -32, 19, -32, 24, -27, 24, 0, 20, 0, 20, -24, 16, -28, 4, -28, 4, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1676101167]
+libraries/ = SubResource("AnimationLibrary_u80x2")
+autoplay = &"Close"
