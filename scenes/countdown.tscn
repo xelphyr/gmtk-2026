@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://dshh3fhj3umq1" path="res://assets/theme/theme.tres" id="1_c8cft"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b64ip"]
-bg_color = Color(0.05490196, 0.07450981, 0.06666667, 1)
+bg_color = Color(0.05490196, 0.05882353, 0.08235294, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4awr"]
 bg_color = Color(0.6431373, 0.09803922, 0.09019608, 1)
@@ -58,7 +58,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.26666668, 0.31455487, 0.32),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.6431373, 0.09803922, 0.09019608, 1), Color(0.6431373, 0.09803922, 0.09019608, 1), Color(0.05490196, 0.07450981, 0.06666667, 1)]
+"values": [Color(1, 1, 1, 1), Color(0.6431373, 0.09803922, 0.09019608, 1), Color(0.6431373, 0.09803922, 0.09019608, 1), Color(0.05490196, 0.05882353, 0.08235294, 1)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false

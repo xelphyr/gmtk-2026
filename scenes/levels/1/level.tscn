@@ -12,7 +12,8 @@ start = NodePath("Start")
 end = NodePath("End")
 
 [node name="Background" parent="." unique_id=1899381530 instance=ExtResource("2_emed8")]
-position = Vector2(728.00006, 420.00006)
+position = Vector2(580, 335.99997)
+scale = Vector2(1159.9999, 672)
 
 [node name="Start" parent="." unique_id=506239360 instance=ExtResource("3_nw4g8")]
 z_index = 1

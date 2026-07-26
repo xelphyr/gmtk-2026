@@ -9,7 +9,9 @@
 [ext_resource type="Resource" uid="uid://bd1v0c8lf0e07" path="res://scenes/levels/2/level.tres" id="6_vtaks"]
 [ext_resource type="Resource" uid="uid://bom8tsx2f3ngw" path="res://scenes/levels/3/level.tres" id="7_kvpfn"]
 [ext_resource type="Resource" uid="uid://74mekoba4at2" path="res://scenes/levels/4/level.tres" id="9_vtaks"]
+[ext_resource type="Resource" uid="uid://nh7460om2iy" path="res://scenes/levels/5/level.tres" id="10_kvuet"]
 [ext_resource type="Script" uid="uid://bghgbvuwcxeiw" path="res://scripts/trail.gd" id="10_vtaks"]
+[ext_resource type="Resource" uid="uid://dnawjlthtcvvc" path="res://scenes/levels/6/level.tres" id="11_trtic"]
 
 [sub_resource type="Curve" id="Curve_li6iq"]
 _data = [Vector2(0.5857143, 0), 0.0, 0.0, 0, 0, Vector2(0.9047619, 0.5267858), 2.3750012, 2.3750012, 0, 0, Vector2(1, 1), 2.3249986, 0.0, 0, 0]
@@ -27,7 +29,7 @@ cam_shake_curve = SubResource("Curve_li6iq")
 
 [node name="LevelManager" type="Node2D" parent="." unique_id=993272433 groups=["LevelManager"]]
 script = ExtResource("3_lnu2h")
-levels = Array[ExtResource("4_iywne")]([ExtResource("4_gee14"), ExtResource("5_0tnpc"), ExtResource("6_vtaks"), ExtResource("7_kvpfn"), ExtResource("9_vtaks")])
+levels = Array[ExtResource("4_iywne")]([ExtResource("4_gee14"), ExtResource("5_0tnpc"), ExtResource("6_vtaks"), ExtResource("7_kvpfn"), ExtResource("9_vtaks"), ExtResource("10_kvuet"), ExtResource("11_trtic")])
 
 [node name="PlayerTrail" type="Line2D" parent="." unique_id=200599256]
 modulate = Color(0.05490196, 0.05882353, 0.08235294, 1)
