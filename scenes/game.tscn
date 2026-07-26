@@ -4,7 +4,12 @@
 [ext_resource type="Script" uid="uid://d1wpwlfyfallu" path="res://scripts/level_manager.gd" id="3_lnu2h"]
 [ext_resource type="Resource" uid="uid://bmdmsu77t3ova" path="res://scenes/levels/0/level.tres" id="4_gee14"]
 [ext_resource type="Script" uid="uid://c8fgpc43a0o8b" path="res://scripts/level.gd" id="4_iywne"]
+[ext_resource type="Resource" uid="uid://dklpfuriadtg4" path="res://scenes/levels/1/level.tres" id="5_0tnpc"]
 [ext_resource type="Script" uid="uid://dng6hkdv3fdx8" path="res://scripts/camera.gd" id="5_iywne"]
+[ext_resource type="Resource" uid="uid://bd1v0c8lf0e07" path="res://scenes/levels/2/level.tres" id="6_vtaks"]
+[ext_resource type="Resource" uid="uid://bom8tsx2f3ngw" path="res://scenes/levels/3/level.tres" id="7_kvpfn"]
+[ext_resource type="Resource" uid="uid://74mekoba4at2" path="res://scenes/levels/4/level.tres" id="9_vtaks"]
+[ext_resource type="Script" uid="uid://bghgbvuwcxeiw" path="res://scripts/trail.gd" id="10_vtaks"]
 
 [node name="Game" type="Node2D" unique_id=1531241673]
 
@@ -17,4 +22,11 @@ script = ExtResource("5_iywne")
 
 [node name="LevelManager" type="Node2D" parent="." unique_id=993272433 groups=["LevelManager"]]
 script = ExtResource("3_lnu2h")
-levels = Array[ExtResource("4_iywne")]([ExtResource("4_gee14")])
+levels = Array[ExtResource("4_iywne")]([ExtResource("4_gee14"), ExtResource("5_0tnpc"), ExtResource("6_vtaks"), ExtResource("7_kvpfn"), ExtResource("9_vtaks")])
+
+[node name="PlayerTrail" type="Line2D" parent="." unique_id=200599256]
+modulate = Color(0.05490196, 0.05882353, 0.08235294, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("10_vtaks")

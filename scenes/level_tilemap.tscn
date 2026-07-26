@@ -18,5 +18,5 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_qpuax")
 
 [node name="Tilemap" type="TileMapLayer" unique_id=902115970]
-modulate = Color(0, 0.56402516, 0.8706568, 1)
+modulate = Color(0.05490196, 0.05882353, 0.08235294, 1)
 tile_set = SubResource("TileSet_6fn0o")

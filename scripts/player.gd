@@ -8,6 +8,7 @@ const wall_jump_factor = 1.0
 const dash_friction = 0.1
 const friction = 0.2
 
+
 #NOTE: Make it so that friction decreases with high speed
 
 var has_dashed = false
@@ -17,7 +18,6 @@ var is_slamming = false
 var slam_start_at = 0
 
 var trigger_bounce = -1
-
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

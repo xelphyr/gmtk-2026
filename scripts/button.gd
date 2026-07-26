@@ -5,7 +5,7 @@ extends Area2D
 @export var state: bool
 
 ## Restitution when the button is pressed when `state=true`, and the button transitions into `state=false`
-const ON_RST = 0.5
+const ON_RST = 1.5
 
 ## Restitution when the button is pressed when `state=false`, and the button transitions into `state=true`
 const OFF_RST = 2.0

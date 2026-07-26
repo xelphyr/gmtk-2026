@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameManager="*uid://rufj42ravq53"
 EventBus="*uid://ch8c2ytbjusfr"
+AudioManager="*uid://dn3o1cjekj7uf"
 
 [display]
 
@@ -29,6 +30,10 @@ window/stretch/aspect="expand"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/saltmire_trail/plugin.cfg")
 
 [global_group]
 
