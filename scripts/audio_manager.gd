@@ -25,3 +25,10 @@ func create_audio(type : SoundEffectSettings.SoundEffectType) -> void:
 			new_audio.play()
 	else:
 		push_error("SoundEffectSetting not declared/added to AudioManager for type ", type)
+
+func clear_audio():
+	for child in get_children():
+		child.stop()
+		child.call_deferred("queue_free")
+	for effect in sound_effect_dict:
+		sound_effect_dict[effect].audio_count = 0

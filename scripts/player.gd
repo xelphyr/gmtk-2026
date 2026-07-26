@@ -64,7 +64,6 @@ func _physics_process(delta: float) -> void:
 		slam_start_at = global_position.y
 
 	if trigger_bounce >0:
-		print(trigger_bounce)
 		is_slamming = false
 		var slam_height = abs(slam_start_at - global_position.y)
 		velocity.y = -sqrt(2*(slam_height*trigger_bounce)*get_gravity().y)

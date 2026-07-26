@@ -1,0 +1,60 @@
+[gd_resource type="Theme" format=3 uid="uid://dshh3fhj3umq1"]
+
+[ext_resource type="FontFile" uid="uid://cj2nt48ej51r8" path="res://assets/fonts/Iceberg/Iceberg-Regular.ttf" id="1_r3pl3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ny3hw"]
+bg_color = Color(0.07735043, 0.08206528, 0.1103444, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6431373, 0.09803922, 0.09019608, 1)
+corner_radius_top_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enqth"]
+bg_color = Color(0.05490196, 0.05882353, 0.08235294, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6431373, 0.09803922, 0.09019608, 1)
+corner_radius_top_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10c53"]
+bg_color = Color(0.03253565, 0.035395715, 0.05397945, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6431373, 0.09803922, 0.09019608, 1)
+corner_radius_top_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r3pl3"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.05490196, 0.05882353, 0.08235294, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jiwi"]
+bg_color = Color(0.05490196, 0.05882353, 0.08235294, 1)
+
+[resource]
+Button/fonts/font = ExtResource("1_r3pl3")
+Button/styles/hover = SubResource("StyleBoxFlat_ny3hw")
+Button/styles/normal = SubResource("StyleBoxFlat_enqth")
+Button/styles/pressed = SubResource("StyleBoxFlat_10c53")
+Label/fonts/font = ExtResource("1_r3pl3")
+Panel/styles/panel = SubResource("StyleBoxFlat_r3pl3")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_5jiwi")

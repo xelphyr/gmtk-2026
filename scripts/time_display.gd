@@ -5,6 +5,8 @@ extends Node
 @export var par_display: Label
 @export var par_ms_display: Label
 
+@export var time_color : Gradient
+
 func _ready():
 	EventBus.time_update.connect(_on_time_update)
 
@@ -14,6 +16,9 @@ func _on_time_update(time:float, par:float):
 
 	time_display.text = "%02.f:%02d" % [time_arr[0], time_arr[1]]
 	ms_display.text = "%02.f" % time_arr[2]
+
+	time_display.modulate = time_color.sample(1-time/GameManager.start_time)
+	ms_display.modulate = time_color.sample(1-time/GameManager.start_time)*0.7
 
 	var par_arr = _num_to_time(par)
 

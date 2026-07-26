@@ -11,6 +11,7 @@ enum SoundEffectType {
     BOUNCE,
     CLOSE,
     OPEN,
+    END,
 }
 
 @export_range(0,10) var limit : int = 5

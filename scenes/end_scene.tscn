@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://db1e1wf2frf3p"]
+
+[ext_resource type="Script" uid="uid://5mjwly1iddyt" path="res://scripts/end_scene.gd" id="1_s7dif"]
+[ext_resource type="Theme" uid="uid://dshh3fhj3umq1" path="res://assets/theme/theme.tres" id="2_85q8e"]
+[ext_resource type="Script" uid="uid://dfoj3vhcnxvcr" path="res://scripts/return_to_menu.gd" id="3_85q8e"]
+
+[node name="EndScene" type="Control" unique_id=1842089073]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s7dif")
+
+[node name="P" type="PanelContainer" parent="." unique_id=941552653]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_85q8e")
+
+[node name="V" type="VBoxContainer" parent="P" unique_id=48480858]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="G" type="GridContainer" parent="P/V" unique_id=1846870230]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 3
+
+[node name="LCText" type="Label" parent="P/V/G" unique_id=1516789581]
+layout_mode = 2
+text = "levels completed"
+
+[node name="LCNum" type="Label" parent="P/V/G" unique_id=64200127]
+layout_mode = 2
+
+[node name="LCPoints" type="Label" parent="P/V/G" unique_id=1482276295]
+layout_mode = 2
+
+[node name="LPText" type="Label" parent="P/V/G" unique_id=1593276408]
+layout_mode = 2
+text = "levels par"
+
+[node name="LPNum" type="Label" parent="P/V/G" unique_id=786239045]
+layout_mode = 2
+
+[node name="LPPoints" type="Label" parent="P/V/G" unique_id=1288884277]
+layout_mode = 2
+
+[node name="ph" type="Control" parent="P/V/G" unique_id=317344354]
+layout_mode = 2
+
+[node name="ph2" type="Control" parent="P/V/G" unique_id=1039667608]
+layout_mode = 2
+
+[node name="Total" type="Label" parent="P/V/G" unique_id=651413708]
+layout_mode = 2
+
+[node name="Return" type="Button" parent="P/V" unique_id=1049683620]
+layout_mode = 2
+text = "Return"
+script = ExtResource("3_85q8e")
+
+[connection signal="pressed" from="P/V/Return" to="P/V/Return" method="_on_pressed"]

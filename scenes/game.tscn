@@ -11,12 +11,17 @@
 [ext_resource type="Resource" uid="uid://74mekoba4at2" path="res://scenes/levels/4/level.tres" id="9_vtaks"]
 [ext_resource type="Script" uid="uid://bghgbvuwcxeiw" path="res://scripts/trail.gd" id="10_vtaks"]
 
+[sub_resource type="Curve" id="Curve_li6iq"]
+_data = [Vector2(0.5857143, 0), 0.0, 0.0, 0, 0, Vector2(0.9047619, 0.5267858), 2.3750012, 2.3750012, 0, 0, Vector2(1, 1), 2.3249986, 0.0, 0, 0]
+point_count = 3
+
 [node name="Game" type="Node2D" unique_id=1531241673]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=886104804]
 z_index = 4096
 position = Vector2(576, 324)
 script = ExtResource("5_iywne")
+cam_shake_curve = SubResource("Curve_li6iq")
 
 [node name="UI" parent="." unique_id=501399207 instance=ExtResource("2_lnu2h")]
 
